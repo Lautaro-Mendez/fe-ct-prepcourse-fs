@@ -129,12 +129,12 @@ function esPrimo(num) {
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
    var aux=true;
-   if (num === 0 || num === 1 || num === 4) {return aux=false;}
-	for (let  i= 2; i < num/ 2; i++) {
-		if (num % i == 0) {return aux=false;}
+   if (num<=1) {return false;}
+	for (var  i= 2; i < num; i++) {
+		if (num % i === 0) {return false;}
 	}
 	// Si no se pudo dividir por ninguno de los de arriba, sí es primo
-	return aux;
+	return true;
 }
 
 function esVerdadero(valor) {
